@@ -18,4 +18,12 @@ public class ExampleResourceTest {
                 .body(is("hello"));
     }
 
+    @Test
+    public void testHomeEndpoint() {
+        given()
+                .when().get("/home")
+                .then()
+                .statusCode(200)
+                .body(is("Welcome to the HomePage"));
+    }
 }
